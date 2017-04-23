@@ -224,6 +224,20 @@ with(avg.daily.act.pat,
 
 ![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
+To find the time interval having the maximum number of steps, max is calculated and than the interval is selected from the data.
+
+
+```r
+  max.steps <- max(avg.daily.act.pat$average.steps.per.interval)
+  paste("The maximum number of average steps/interval is", round(max.steps, digits = 0), 
+        "it occured at", format(avg.daily.act.pat$interval_dat[avg.daily.act.pat$average.steps.per.interval == max.steps], "%H:%M"))
+```
+
+```
+## [1] "The maximum number of average steps/interval is 206 it occured at 08:35"
+```
+
+
 ## Imputing missing values
 
 To fill the missing values the average value of the corresponding intervall is used.The average is already calculated. Now these averages are bound to the raw data. Afterwards the missing steps are filled from the average steps and a new set with just date, interval and steps is derived from the data.
@@ -323,7 +337,7 @@ hist(enhanced.perDay$total.steps.per.day[!is.na(enhanced.perDay$total.steps.per.
       col = "red") 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 
 ```r
@@ -428,4 +442,4 @@ weekday.set <- weekday.set %>% arrange(weekday, interval)
 xyplot(average.steps.per.interval ~ interval | weekday, data = weekday.set, layout = c(1,2), type = "l", ylab = "Number of steps", xlab = "Intervall")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-16-1.png)<!-- -->

@@ -102,6 +102,15 @@ with(avg.daily.act.pat,
                 ylab = "Average Steps per Intervall"))
 ```
 
+To find the time interval having the maximum number of steps, max is calculated and than the interval is selected from the data.
+
+```{R}
+  max.steps <- max(avg.daily.act.pat$average.steps.per.interval)
+  paste("The maximum number of average steps/interval is", round(max.steps, digits = 0), 
+        "it occured at", format(avg.daily.act.pat$interval_dat[avg.daily.act.pat$average.steps.per.interval == max.steps], "%H:%M"))
+```
+
+
 ## Imputing missing values
 
 To fill the missing values the average value of the corresponding intervall is used.The average is already calculated. Now these averages are bound to the raw data. Afterwards the missing steps are filled from the average steps and a new set with just date, interval and steps is derived from the data.
