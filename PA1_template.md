@@ -124,7 +124,7 @@ hist(perDay$total.steps.per.day[!is.na(perDay$total.steps.per.day)],
       col = "red") 
 ```
 
-![](RepData_PeerAssessment1_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 ```r
@@ -222,7 +222,7 @@ with(avg.daily.act.pat,
                 ylab = "Average Steps per Intervall"))
 ```
 
-![](RepData_PeerAssessment1_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ## Imputing missing values
 
@@ -323,7 +323,7 @@ hist(enhanced.perDay$total.steps.per.day[!is.na(enhanced.perDay$total.steps.per.
       col = "red") 
 ```
 
-![](RepData_PeerAssessment1_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 
 ```r
@@ -428,4 +428,4 @@ weekday.set <- weekday.set %>% arrange(weekday, interval)
 xyplot(average.steps.per.interval ~ interval | weekday, data = weekday.set, layout = c(1,2), type = "l", ylab = "Number of steps", xlab = "Intervall")
 ```
 
-![](RepData_PeerAssessment1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
