@@ -129,20 +129,20 @@ hist(perDay$total.steps.per.day[!is.na(perDay$total.steps.per.day)],
 
 ```r
 mean.total.steps <- mean(perDay$total.steps.per.day)
-print(paste("Mean of total steps:", as.character(round(mean.total.steps, digits = 0))))
+print(paste("Mean of total steps:", as.character(round(mean.total.steps, digits = 4))))
 ```
 
 ```
-## [1] "Mean of total steps: 10766"
+## [1] "Mean of total steps: 10766.1887"
 ```
 
 ```r
 median.total.steps <- median(perDay$total.steps.per.day)
-print(paste("Median of total steps:", round(mean.total.steps, digits = 0)))
+print(paste("Median of total steps:", round(median.total.steps, digits = 4)))
 ```
 
 ```
-## [1] "Median of total steps: 10766"
+## [1] "Median of total steps: 10765"
 ```
 
 ## What is the average daily activity pattern?
@@ -207,7 +207,7 @@ str(avg.daily.act.pat)
 ## 'data.frame':	288 obs. of  3 variables:
 ##  $ interval                  : int  0 5 10 15 20 25 30 35 40 45 ...
 ##  $ average.steps.per.interval: num  1.717 0.3396 0.1321 0.1509 0.0755 ...
-##  $ interval_dat              : POSIXlt, format: "2017-04-23 00:00:00" "2017-04-23 00:05:00" ...
+##  $ interval_dat              : POSIXlt, format: "2017-04-24 00:00:00" "2017-04-24 00:05:00" ...
 ```
 
 Now the the data are visualized as line graph.
@@ -342,20 +342,20 @@ hist(enhanced.perDay$total.steps.per.day[!is.na(enhanced.perDay$total.steps.per.
 
 ```r
 enhanced.mean.total.steps <- mean(enhanced.perDay$total.steps.per.day)
-print(paste("Mean of total steps:", as.character(round(enhanced.mean.total.steps, digits = 0))))
+print(paste("Mean of total steps:", as.character(round(enhanced.mean.total.steps, digits = 4))))
 ```
 
 ```
-## [1] "Mean of total steps: 10766"
+## [1] "Mean of total steps: 10766.1887"
 ```
 
 ```r
 enhanced.median.total.steps <- median(enhanced.perDay$total.steps.per.day)
-print(paste("Median of total steps:", round(enhanced.mean.total.steps, digits = 0)))
+print(paste("Median of total steps:", round(enhanced.median.total.steps, digits = 4)))
 ```
 
 ```
-## [1] "Median of total steps: 10766"
+## [1] "Median of total steps: 10766.1887"
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?

@@ -65,9 +65,9 @@ hist(perDay$total.steps.per.day[!is.na(perDay$total.steps.per.day)],
 
 ```{R}
 mean.total.steps <- mean(perDay$total.steps.per.day)
-print(paste("Mean of total steps:", as.character(round(mean.total.steps, digits = 0))))
+print(paste("Mean of total steps:", as.character(round(mean.total.steps, digits = 4))))
 median.total.steps <- median(perDay$total.steps.per.day)
-print(paste("Median of total steps:", round(mean.total.steps, digits = 0)))
+print(paste("Median of total steps:", round(median.total.steps, digits = 4)))
 ```
 
 ## What is the average daily activity pattern?
@@ -149,9 +149,9 @@ hist(enhanced.perDay$total.steps.per.day[!is.na(enhanced.perDay$total.steps.per.
 
 ```{R}
 enhanced.mean.total.steps <- mean(enhanced.perDay$total.steps.per.day)
-print(paste("Mean of total steps:", as.character(round(enhanced.mean.total.steps, digits = 0))))
+print(paste("Mean of total steps:", as.character(round(enhanced.mean.total.steps, digits = 4))))
 enhanced.median.total.steps <- median(enhanced.perDay$total.steps.per.day)
-print(paste("Median of total steps:", round(enhanced.mean.total.steps, digits = 0)))
+print(paste("Median of total steps:", round(enhanced.median.total.steps, digits = 4)))
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?
